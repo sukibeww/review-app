@@ -6,10 +6,20 @@ import About from '../screens/about'
 
 const screens = {
   Home: {
-    screen: Home
+    screen: Home,
+    navigationOptions: {
+      title: 'Review App',
+      headerStyle: {
+        backgroundColor: '#FEFEFE',
+        fontWeight: 'bold'
+      }
+    }
   },
   ReviewDetails: {
-    screen: ReviewDetails
+    screen: ReviewDetails,
+    navigationOptions: {
+      title: 'Review Details'
+    }
   },
   About: {
     screen: About
