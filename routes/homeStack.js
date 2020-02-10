@@ -7,9 +7,9 @@ import Header from '../shared/header'
 const screens = {
   Home: {
     screen: Home,
-    navigationOptions: (props) => {
+    navigationOptions: ({navigation}) => {
       return{
-        header: () => <Header navigation={props.navigation} />
+        header: () => <Header navigation={navigation} title="Home" />
       }
     }
   },

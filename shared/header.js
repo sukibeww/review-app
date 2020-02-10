@@ -2,8 +2,7 @@ import React from 'react'
 import { StyleSheet, Text, View, Dimensions } from 'react-native'
 import { MaterialIcons } from '@expo/vector-icons'
 
-const Header = ({navigation}) => {
-
+const Header = ({navigation, title}) => {
 
   const openMenu = () => {
     navigation.openDrawer()
@@ -13,7 +12,7 @@ const Header = ({navigation}) => {
     <View style={styles.header}>
       <MaterialIcons name="menu" size={28} style={styles.icon} onPress={openMenu}/>
       <View>
-        <Text style={styles.headerText}>Rewiiew</Text>
+        <Text style={styles.headerText}>{title}</Text>
       </View>
     </View>
   )
