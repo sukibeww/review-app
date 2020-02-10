@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { View, FlatList, TouchableOpacity, Text} from 'react-native'
+import { View, FlatList, TouchableOpacity, Text } from 'react-native'
 import  globalStyles from '../styles/global'
 
 const Home = ({navigation}) => {
