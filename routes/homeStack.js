@@ -18,9 +18,6 @@ const screens = {
     navigationOptions: {
       title: 'Review Details',
       //override the default style
-      headerStyle: {
-        backgroundColor: 'red',
-      }
     }
   },
 }
