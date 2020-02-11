@@ -19,7 +19,7 @@ const Header = ({navigation, title}) => {
   )
 }
 
-const width = Dimensions.get('window').width - 20
+// const width = Dimensions.get('window').width - 20
 const styles = StyleSheet.create({
   header: {
     width: '100%',
