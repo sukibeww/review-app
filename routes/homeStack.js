@@ -29,7 +29,7 @@ const HomeStack = createStackNavigator(screens, {
     headerTitleAlign: 'center',
     headerStyle: {
       backgroundColor: 'whiteSmoke',
-      height: 60
+      height: 100
     }
   }
 })
