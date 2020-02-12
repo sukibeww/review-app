@@ -3,6 +3,7 @@ import { View, FlatList, TouchableOpacity, Text, Modal, StyleSheet } from 'react
 import  globalStyles from '../styles/global'
 import Card from '../shared/card'
 import { MaterialIcons } from '@expo/vector-icons'
+import ReviewForm from './reviewForm'
 
 const Home = ({navigation}) => {
   const [ modalOpen , setModalOpen ] = useState(false)
@@ -17,9 +18,9 @@ const Home = ({navigation}) => {
   return(
     <View style={globalStyles.container}>
       <Modal visible={modalOpen} animationType='slide'>
-        <View style={globalStyles.modalContent}>
-          <Text> Hi  </Text> 
+        <View style={styles.modalContent}>
           <MaterialIcons style={{...styles.modelToggle, ...styles.modalClose}} name='close' size={24} onPress={() => setModalOpen(false)}/>
+          <ReviewForm/> 
         </View>
       </Modal>
 
@@ -50,6 +51,9 @@ const styles = StyleSheet.create({
   modalClose: {
     marginTop: 20,
     marginBottom: 0
+  },
+  modalContent: {
+    flex: 1,
   }
 })
 
