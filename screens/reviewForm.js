@@ -41,7 +41,9 @@ const ReviewForm = ({addReview}) => {
             placeholder='Review title' 
             onChangeText={ props.handleChange('title')}
             value={props.values.title}
-            />
+            onBlur={props.handleBlur('title')}
+            /> 
+            <Text style={globalStyle.errorText}>{props.touched.title && props.errors.title}</Text>
 
             <TextInput 
             multiline
@@ -49,14 +51,19 @@ const ReviewForm = ({addReview}) => {
             placeholder='Review body' 
             onChangeText={ props.handleChange('body')}
             value={props.values.body}
+            onBlur={props.handleBlur('body')}
             />
+            <Text style={globalStyle.errorText}>{props.touched.body && props.errors.body}</Text>
+
             <TextInput 
             style={globalStyle.input} 
             placeholder='Rating 1-5' 
             onChangeText={ props.handleChange('rating')}
             value={props.values.rating}
             keyboardType='numeric'
+            onBlur={props.handleBlur('rating')}
             />
+            <Text style={globalStyle.errorText}>{props.touched.rating &&props.errors.rating}</Text>
             <Button title='submit' color='maroon' onPress={props.handleSubmit}/>
           </View>
         )}
